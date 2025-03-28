@@ -1,7 +1,7 @@
 Country Boundaries API
 ============
 
-Country Shapes is a simple tool for getting the shape of a specific country's border. It returns the shape of the specified country's border.
+Country Boundaries is a simple tool for getting the shape of a specific country's border. It returns the shape of the specified country's border.
 
 ![Build Status](https://img.shields.io/badge/build-passing-green)
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)

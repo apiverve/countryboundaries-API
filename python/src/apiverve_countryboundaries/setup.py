@@ -10,20 +10,14 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_countryboundaries',
-    version='1.1.12',
+    version='1.1.13',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
     description='Country Boundaries is a simple tool for getting the shape of a specific country's border. It returns the shape of the specified country's border.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com',
-    project_urls={
-        'Homepage': 'https://apiverve.com',
-        'Documentation': 'https://docs.apiverve.com/ref/countryboundaries',
-        'Source': 'https://github.com/apiverve/countryboundaries-api',
-        'Bug Tracker': 'https://github.com/apiverve/countryboundaries-api/issues'
-    },
+    url='https://apiverve.com/marketplace/countryboundaries?utm_source=pypi&utm_medium=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',

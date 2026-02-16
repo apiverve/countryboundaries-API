@@ -4100,8 +4100,9 @@ from apiverve_countryboundaries.apiClient import CountryboundariesAPIClient
 
 api = CountryboundariesAPIClient("[YOUR_API_KEY]")
 
+query = { "country": "CA" }
+
 try:
-    query = { "country": "CA" }
     result = api.execute(query)
     print(result)
 finally:

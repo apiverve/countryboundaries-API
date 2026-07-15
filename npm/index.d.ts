@@ -4,33 +4,45 @@ declare module '@apiverve/countryboundaries' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface countryboundariesResponse {
     status: string;
     error: string | null;
     data: CountryBoundariesData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface CountryBoundariesData {
       features: Feature[];
-      type:     string;
+      type:     null | string;
   }
   
   interface Feature {
       geometry:   Geometry;
-      id:         string;
+      id:         null | string;
       properties: Properties;
-      type:       string;
+      type:       null | string;
   }
   
   interface Geometry {
-      coordinates: Array<Array<Array<number[]>>>;
-      type:        string;
+      coordinates: Array<Array<Array<(number | null)[]>>>;
+      type:        null | string;
   }
   
   interface Properties {
-      name: string;
+      name: null | string;
   }
 
   export default class countryboundariesWrapper {

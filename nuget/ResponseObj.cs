@@ -25,6 +25,9 @@ namespace APIVerve.API.CountryBoundaries
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -54,7 +57,7 @@ namespace APIVerve.API.CountryBoundaries
     public partial class Geometry
     {
         [JsonProperty("coordinates")]
-        public double[][][][] Coordinates { get; set; }
+        public double?[][][][] Coordinates { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }
@@ -64,5 +67,17 @@ namespace APIVerve.API.CountryBoundaries
     {
         [JsonProperty("name")]
         public string Name { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
